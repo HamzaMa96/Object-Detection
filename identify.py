@@ -82,7 +82,7 @@ def main():
             file_type = r'\*'
             files = glob.glob(folder_path + file_type + "\\")
             max_file = max(files, key=os.path.getctime)
-            prediction = max_file + video
+            prediction = max_file + video.name
             prediction = prediction.replace("\\", "/")
             prediction = prediction.replace("test/", '')
             video = vlc.MediaPlayer(prediction)
