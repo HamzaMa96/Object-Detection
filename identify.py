@@ -62,7 +62,7 @@ def main():
             f.write(image.getbuffer())
             st.success("Image Saved")
         if st.button('identify'):
-            model.predict(source="test"+image.name, show=True, save=True, conf=0.5)
+            model.predict(source=image.name, show=True, save=True, conf=0.5)
             folder_path = r'D:\\Object Detection YoloV8\\runs\detect'
             file_type = r'\*'
             files = glob.glob(folder_path + file_type + "\\")
